@@ -16,16 +16,29 @@ const Total = (props) => {
   );
 };
 
+const Part = (props) => {
+  return (
+    <p>{props.name} {props.exercises}</p>
+  );
+};
+
 //accept an array of {partname, exercises} objects
 const Content = (props) => {
-  console.log(props);
+  /*console.log(props);*/
   let tempprops = props.coursecontent;
   
-  return (
+  /*return (
     <>
       <p>{tempprops[0].partname} {tempprops[0].exercises}</p>
       <p>{tempprops[1].partname} {tempprops[1].exercises}</p>
       <p>{tempprops[2].partname} {tempprops[2].exercises}</p>
+    </>
+  );*/
+  return (
+    <>
+      <Part name={tempprops[0].partname} exercises={tempprops[0].exercises} />
+      <Part name={tempprops[1].partname} exercises={tempprops[0].exercises} />
+      <Part name={tempprops[2].partname} exercises={tempprops[0].exercises} />
     </>
   );
 };
